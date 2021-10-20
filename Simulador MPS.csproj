@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F37B1BED-1840-4F11-A44C-D38DADC5F3D6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Simulador_MPS</RootNamespace>
+    <AssemblyName>Simulador MPS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Atuador.cs" />
+    <Compile Include="Exceptions.cs" />
+    <Compile Include="FormSimulador1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSimulador1.Designer.cs">
+      <DependentUpon>FormSimulador1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSimulador2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSimulador2.Designer.cs">
+      <DependentUpon>FormSimulador2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModbusClient.cs" />
+    <Compile Include="ModbusServer.cs" />
+    <Compile Include="Piece.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Simulador.cs" />
+    <Compile Include="SimuladorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SimuladorForm.Designer.cs">
+      <DependentUpon>SimuladorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoreLogData.cs" />
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSimulador1.resx">
+      <DependentUpon>FormSimulador1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSimulador2.resx">
+      <DependentUpon>FormSimulador2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SimuladorForm.resx">
+      <DependentUpon>SimuladorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Carrossel.png" />
+    <None Include="Resources\BaseSeparador.png" />
+    <None Include="Resources\Broca.png" />
+    <None Include="Resources\BrocaAzul.png" />
+    <Content Include="Resources\Elevador.png" />
+    <None Include="Resources\Estacao34.png" />
+    <Content Include="Resources\Expulsador.png" />
+    <Content Include="Resources\FundoGeral.png" />
+    <None Include="Resources\Info Image.png" />
+    <None Include="Resources\Furadeira.png" />
+    <Content Include="Resources\Magazine.png" />
+    <None Include="Resources\PrendePeca.png" />
+    <None Include="Resources\Rotativo2.png" />
+    <Content Include="Resources\RotativoBraco.png" />
+    <None Include="Resources\TestePeca.png" />
+    <None Include="Resources\SeparadorVentosa.png" />
+    <None Include="Resources\RotativoVentosa.png" />
+    <Content Include="Resources\Ventosa.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
