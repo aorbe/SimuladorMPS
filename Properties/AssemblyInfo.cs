@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // conjunto de atributos. Altere estes valores de atributo para modificar as informações
 // associadas a um assembly.
 [assembly: AssemblyTitle("Simulador MPS")]
-[assembly: AssemblyDescription("Este software executa uma simulação simplificada da planta MPS (Senai). Ele é um servidor Modbus TCP (Entradas Digitais:40001, Saídas Digitais:40017, Altura:40002)")]
+[assembly: AssemblyDescription("Este software executa uma simulação simplificada da planta MPS (Senai). Ele é um servidor Modbus TCP (Entradas Digitais:40001/3, Saídas Digitais:40017/8, Altura:40002)")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("André Santos")]
 [assembly: AssemblyProduct("Simulador Simplificado Planta MPS")]

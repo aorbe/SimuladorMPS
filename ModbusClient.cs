@@ -84,7 +84,8 @@ namespace Simulador_MPS
 			if (debug) StoreLogData.Instance.Store("Simulador_MPS library initialized for Modbus-TCP, IPAddress: " + ipAddress + ", Port: "+port ,System.DateTime.Now);
 #if (!COMMERCIAL)
             Console.WriteLine("Simulador_MPS Client Library Version: " + Assembly.GetExecutingAssembly().GetName().Version.ToString());
-            Console.WriteLine("Copyright (c) Stefan Rossmann Engineering Solutions");
+            Console.WriteLine("Based on Stefan Rossmann Engineering Solutions Library");
+            Console.WriteLine("Adapted by Prof. André Santos");
             Console.WriteLine();
 #endif
             this.ipAddress = ipAddress;
@@ -100,7 +101,8 @@ namespace Simulador_MPS
         	if (debug) StoreLogData.Instance.Store("Simulador_MPS library initialized for Modbus-RTU, COM-Port: " + serialPort ,System.DateTime.Now);
 #if (!COMMERCIAL)
             Console.WriteLine("Simulador_MPS Client Library Version: " + Assembly.GetExecutingAssembly().GetName().Version.ToString());
-            Console.WriteLine("Copyright (c) Stefan Rossmann Engineering Solutions");
+            Console.WriteLine("Based on Stefan Rossmann Engineering Solutions Library");
+            Console.WriteLine("Adapted by Prof. André Santos");
             Console.WriteLine();
 #endif
             this.serialport = new SerialPort();
@@ -122,7 +124,8 @@ namespace Simulador_MPS
         	if (debug) StoreLogData.Instance.Store("Simulador_MPS library initialized for Modbus-TCP" ,System.DateTime.Now);
 #if (!COMMERCIAL)
             Console.WriteLine("Simulador_MPS Client Library Version: " + Assembly.GetExecutingAssembly().GetName().Version.ToString());
-            Console.WriteLine("Copyright (c) Stefan Rossmann Engineering Solutions");
+            Console.WriteLine("Based on Stefan Rossmann Engineering Solutions Library");
+            Console.WriteLine("Adapted by Prof. André Santos");
             Console.WriteLine();
 #endif
         }

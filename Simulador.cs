@@ -417,17 +417,20 @@ namespace Simulador_MPS
                         // Colisão frontal
                         if ((x + p.r.Width > next_p.r.X) && ((y == next_p.r.Y) || (y + 1 == next_p.r.Y)))
                         {
+#if DEBUG
                             Console.WriteLine("Colisão X {0} Y{1} L{2}", x, y, p.local.ToString());
                             Console.WriteLine("Colisão X {0} Y{1} L{2}", next_p.r.X, next_p.r.Y, next_p.local.ToString());
+#endif
                             p.message = "Colisão lateral entre peças";
                             p.local = Piece.LOCAL.REMOVER;
                         }
                         // Colisão superior
                         if ((y + p.r.Height > next_p.r.Y) && (x == next_p.r.X))
                         {
+#if DEBUG
                             Console.WriteLine("Colisão X {0} Y{1} L{2}", x, y, p.local.ToString());
                             Console.WriteLine("Colisão X {0} Y{1} L{2}", next_p.r.X, next_p.r.Y, next_p.local.ToString());
-
+#endif
                             p.message = "Colisão entre peças";
                             p.local = Piece.LOCAL.REMOVER;
                         }
